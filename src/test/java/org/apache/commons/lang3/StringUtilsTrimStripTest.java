@@ -36,8 +36,8 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals(FOO, StringUtils.trim(" " + FOO));
         assertEquals(FOO, StringUtils.trim(FOO + ""));
         assertEquals("", StringUtils.trim(" \t\r\n\b "));
-        assertEquals("", StringUtils.trim(StringUtilsTest.TRIMMABLE));
-        assertEquals(StringUtilsTest.NON_TRIMMABLE, StringUtils.trim(StringUtilsTest.NON_TRIMMABLE));
+        assertEquals("", StringUtils.trim(JStringUtilsTest.TRIMMABLE));
+        assertEquals(JStringUtilsTest.NON_TRIMMABLE, StringUtils.trim(JStringUtilsTest.NON_TRIMMABLE));
         assertEquals("", StringUtils.trim(""));
         assertNull(StringUtils.trim(null));
     }
@@ -49,8 +49,8 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals(FOO, StringUtils.trimToNull(" " + FOO));
         assertEquals(FOO, StringUtils.trimToNull(FOO + ""));
         assertNull(StringUtils.trimToNull(" \t\r\n\b "));
-        assertNull(StringUtils.trimToNull(StringUtilsTest.TRIMMABLE));
-        assertEquals(StringUtilsTest.NON_TRIMMABLE, StringUtils.trimToNull(StringUtilsTest.NON_TRIMMABLE));
+        assertNull(StringUtils.trimToNull(JStringUtilsTest.TRIMMABLE));
+        assertEquals(JStringUtilsTest.NON_TRIMMABLE, StringUtils.trimToNull(JStringUtilsTest.NON_TRIMMABLE));
         assertNull(StringUtils.trimToNull(""));
         assertNull(StringUtils.trimToNull(null));
     }
@@ -62,8 +62,8 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals(FOO, StringUtils.trimToEmpty(" " + FOO));
         assertEquals(FOO, StringUtils.trimToEmpty(FOO + ""));
         assertEquals("", StringUtils.trimToEmpty(" \t\r\n\b "));
-        assertEquals("", StringUtils.trimToEmpty(StringUtilsTest.TRIMMABLE));
-        assertEquals(StringUtilsTest.NON_TRIMMABLE, StringUtils.trimToEmpty(StringUtilsTest.NON_TRIMMABLE));
+        assertEquals("", StringUtils.trimToEmpty(JStringUtilsTest.TRIMMABLE));
+        assertEquals(JStringUtilsTest.NON_TRIMMABLE, StringUtils.trimToEmpty(JStringUtilsTest.NON_TRIMMABLE));
         assertEquals("", StringUtils.trimToEmpty(""));
         assertEquals("", StringUtils.trimToEmpty(null));
     }
@@ -74,8 +74,8 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("", StringUtils.strip(""));
         assertEquals("", StringUtils.strip("        "));
         assertEquals("abc", StringUtils.strip("  abc  "));
-        assertEquals(StringUtilsTest.NON_WHITESPACE,
-            StringUtils.strip(StringUtilsTest.WHITESPACE + StringUtilsTest.NON_WHITESPACE + StringUtilsTest.WHITESPACE));
+        assertEquals(JStringUtilsTest.NON_WHITESPACE,
+            StringUtils.strip(JStringUtilsTest.WHITESPACE + JStringUtilsTest.NON_WHITESPACE + JStringUtilsTest.WHITESPACE));
     }
 
     @Test
@@ -83,10 +83,10 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertNull(StringUtils.stripToNull(null));
         assertNull(StringUtils.stripToNull(""));
         assertNull(StringUtils.stripToNull("        "));
-        assertNull(StringUtils.stripToNull(StringUtilsTest.WHITESPACE));
+        assertNull(StringUtils.stripToNull(JStringUtilsTest.WHITESPACE));
         assertEquals("ab c", StringUtils.stripToNull("  ab c  "));
-        assertEquals(StringUtilsTest.NON_WHITESPACE,
-            StringUtils.stripToNull(StringUtilsTest.WHITESPACE + StringUtilsTest.NON_WHITESPACE + StringUtilsTest.WHITESPACE));
+        assertEquals(JStringUtilsTest.NON_WHITESPACE,
+            StringUtils.stripToNull(JStringUtilsTest.WHITESPACE + JStringUtilsTest.NON_WHITESPACE + JStringUtilsTest.WHITESPACE));
     }
 
     @Test
@@ -94,10 +94,10 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("", StringUtils.stripToEmpty(null));
         assertEquals("", StringUtils.stripToEmpty(""));
         assertEquals("", StringUtils.stripToEmpty("        "));
-        assertEquals("", StringUtils.stripToEmpty(StringUtilsTest.WHITESPACE));
+        assertEquals("", StringUtils.stripToEmpty(JStringUtilsTest.WHITESPACE));
         assertEquals("ab c", StringUtils.stripToEmpty("  ab c  "));
-        assertEquals(StringUtilsTest.NON_WHITESPACE,
-            StringUtils.stripToEmpty(StringUtilsTest.WHITESPACE + StringUtilsTest.NON_WHITESPACE + StringUtilsTest.WHITESPACE));
+        assertEquals(JStringUtilsTest.NON_WHITESPACE,
+            StringUtils.stripToEmpty(JStringUtilsTest.WHITESPACE + JStringUtilsTest.NON_WHITESPACE + JStringUtilsTest.WHITESPACE));
     }
 
     @Test
@@ -107,15 +107,15 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("", StringUtils.strip("", null));
         assertEquals("", StringUtils.strip("        ", null));
         assertEquals("abc", StringUtils.strip("  abc  ", null));
-        assertEquals(StringUtilsTest.NON_WHITESPACE,
-            StringUtils.strip(StringUtilsTest.WHITESPACE + StringUtilsTest.NON_WHITESPACE + StringUtilsTest.WHITESPACE, null));
+        assertEquals(JStringUtilsTest.NON_WHITESPACE,
+            StringUtils.strip(JStringUtilsTest.WHITESPACE + JStringUtilsTest.NON_WHITESPACE + JStringUtilsTest.WHITESPACE, null));
 
         // "" strip
         assertNull(StringUtils.strip(null, ""));
         assertEquals("", StringUtils.strip("", ""));
         assertEquals("        ", StringUtils.strip("        ", ""));
         assertEquals("  abc  ", StringUtils.strip("  abc  ", ""));
-        assertEquals(StringUtilsTest.WHITESPACE, StringUtils.strip(StringUtilsTest.WHITESPACE, ""));
+        assertEquals(JStringUtilsTest.WHITESPACE, StringUtils.strip(JStringUtilsTest.WHITESPACE, ""));
 
         // " " strip
         assertNull(StringUtils.strip(null, " "));
@@ -129,7 +129,7 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("        ", StringUtils.strip("        ", "ab"));
         assertEquals("  abc  ", StringUtils.strip("  abc  ", "ab"));
         assertEquals("c", StringUtils.strip("abcabab", "ab"));
-        assertEquals(StringUtilsTest.WHITESPACE, StringUtils.strip(StringUtilsTest.WHITESPACE, ""));
+        assertEquals(JStringUtilsTest.WHITESPACE, StringUtils.strip(JStringUtilsTest.WHITESPACE, ""));
     }
 
     @Test
@@ -139,15 +139,15 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("", StringUtils.stripStart("", null));
         assertEquals("", StringUtils.stripStart("        ", null));
         assertEquals("abc  ", StringUtils.stripStart("  abc  ", null));
-        assertEquals(StringUtilsTest.NON_WHITESPACE + StringUtilsTest.WHITESPACE,
-            StringUtils.stripStart(StringUtilsTest.WHITESPACE + StringUtilsTest.NON_WHITESPACE + StringUtilsTest.WHITESPACE, null));
+        assertEquals(JStringUtilsTest.NON_WHITESPACE + JStringUtilsTest.WHITESPACE,
+            StringUtils.stripStart(JStringUtilsTest.WHITESPACE + JStringUtilsTest.NON_WHITESPACE + JStringUtilsTest.WHITESPACE, null));
 
         // "" stripStart
         assertNull(StringUtils.stripStart(null, ""));
         assertEquals("", StringUtils.stripStart("", ""));
         assertEquals("        ", StringUtils.stripStart("        ", ""));
         assertEquals("  abc  ", StringUtils.stripStart("  abc  ", ""));
-        assertEquals(StringUtilsTest.WHITESPACE, StringUtils.stripStart(StringUtilsTest.WHITESPACE, ""));
+        assertEquals(JStringUtilsTest.WHITESPACE, StringUtils.stripStart(JStringUtilsTest.WHITESPACE, ""));
 
         // " " stripStart
         assertNull(StringUtils.stripStart(null, " "));
@@ -161,7 +161,7 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("        ", StringUtils.stripStart("        ", "ab"));
         assertEquals("  abc  ", StringUtils.stripStart("  abc  ", "ab"));
         assertEquals("cabab", StringUtils.stripStart("abcabab", "ab"));
-        assertEquals(StringUtilsTest.WHITESPACE, StringUtils.stripStart(StringUtilsTest.WHITESPACE, ""));
+        assertEquals(JStringUtilsTest.WHITESPACE, StringUtils.stripStart(JStringUtilsTest.WHITESPACE, ""));
     }
 
     @Test
@@ -171,15 +171,15 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("", StringUtils.stripEnd("", null));
         assertEquals("", StringUtils.stripEnd("        ", null));
         assertEquals("  abc", StringUtils.stripEnd("  abc  ", null));
-        assertEquals(StringUtilsTest.WHITESPACE + StringUtilsTest.NON_WHITESPACE,
-            StringUtils.stripEnd(StringUtilsTest.WHITESPACE + StringUtilsTest.NON_WHITESPACE + StringUtilsTest.WHITESPACE, null));
+        assertEquals(JStringUtilsTest.WHITESPACE + JStringUtilsTest.NON_WHITESPACE,
+            StringUtils.stripEnd(JStringUtilsTest.WHITESPACE + JStringUtilsTest.NON_WHITESPACE + JStringUtilsTest.WHITESPACE, null));
 
         // "" stripEnd
         assertNull(StringUtils.stripEnd(null, ""));
         assertEquals("", StringUtils.stripEnd("", ""));
         assertEquals("        ", StringUtils.stripEnd("        ", ""));
         assertEquals("  abc  ", StringUtils.stripEnd("  abc  ", ""));
-        assertEquals(StringUtilsTest.WHITESPACE, StringUtils.stripEnd(StringUtilsTest.WHITESPACE, ""));
+        assertEquals(JStringUtilsTest.WHITESPACE, StringUtils.stripEnd(JStringUtilsTest.WHITESPACE, ""));
 
         // " " stripEnd
         assertNull(StringUtils.stripEnd(null, " "));
@@ -193,7 +193,7 @@ public class StringUtilsTrimStripTest extends AbstractLangTest {
         assertEquals("        ", StringUtils.stripEnd("        ", "ab"));
         assertEquals("  abc  ", StringUtils.stripEnd("  abc  ", "ab"));
         assertEquals("abc", StringUtils.stripEnd("abcabab", "ab"));
-        assertEquals(StringUtilsTest.WHITESPACE, StringUtils.stripEnd(StringUtilsTest.WHITESPACE, ""));
+        assertEquals(JStringUtilsTest.WHITESPACE, StringUtils.stripEnd(JStringUtilsTest.WHITESPACE, ""));
     }
 
     @Test

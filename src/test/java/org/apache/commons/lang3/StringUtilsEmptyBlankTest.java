@@ -89,7 +89,7 @@ public class StringUtilsEmptyBlankTest extends AbstractLangTest {
     public void testIsBlank() {
         assertTrue(StringUtils.isBlank(null));
         assertTrue(StringUtils.isBlank(""));
-        assertTrue(StringUtils.isBlank(StringUtilsTest.WHITESPACE));
+        assertTrue(StringUtils.isBlank(JStringUtilsTest.WHITESPACE));
         assertFalse(StringUtils.isBlank("foo"));
         assertFalse(StringUtils.isBlank("  foo  "));
     }
@@ -98,7 +98,7 @@ public class StringUtilsEmptyBlankTest extends AbstractLangTest {
     public void testIsNotBlank() {
         assertFalse(StringUtils.isNotBlank(null));
         assertFalse(StringUtils.isNotBlank(""));
-        assertFalse(StringUtils.isNotBlank(StringUtilsTest.WHITESPACE));
+        assertFalse(StringUtils.isNotBlank(JStringUtilsTest.WHITESPACE));
         assertTrue(StringUtils.isNotBlank("foo"));
         assertTrue(StringUtils.isNotBlank("  foo  "));
     }

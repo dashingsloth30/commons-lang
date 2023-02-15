@@ -166,8 +166,8 @@ public class StringUtilsIsTest extends AbstractLangTest {
         assertFalse(StringUtils.isWhitespace("a  "));
         assertFalse(StringUtils.isWhitespace("  a"));
         assertFalse(StringUtils.isWhitespace("aba"));
-        assertTrue(StringUtils.isWhitespace(StringUtilsTest.WHITESPACE));
-        assertFalse(StringUtils.isWhitespace(StringUtilsTest.NON_WHITESPACE));
+        assertTrue(StringUtils.isWhitespace(JStringUtilsTest.WHITESPACE));
+        assertFalse(StringUtils.isWhitespace(JStringUtilsTest.NON_WHITESPACE));
     }
 
 }

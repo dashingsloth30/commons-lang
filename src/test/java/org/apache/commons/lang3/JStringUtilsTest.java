@@ -54,7 +54,7 @@ import org.junit.jupiter.params.provider.ValueSource;
  * which been moved to their own test classes.
  */
 @SuppressWarnings("deprecation") // deliberate use of deprecated code
-public class StringUtilsTest extends AbstractLangTest {
+public class JStringUtilsTest extends AbstractLangTest {
 
     static final String WHITESPACE;
     static final String NON_WHITESPACE;
@@ -775,8 +775,8 @@ public class StringUtilsTest extends AbstractLangTest {
         assertNull(StringUtils.deleteWhitespace(null));
         assertEquals("", StringUtils.deleteWhitespace(""));
         assertEquals("", StringUtils.deleteWhitespace("  \u000C  \t\t\u001F\n\n \u000B  "));
-        assertEquals("", StringUtils.deleteWhitespace(StringUtilsTest.WHITESPACE));
-        assertEquals(StringUtilsTest.NON_WHITESPACE, StringUtils.deleteWhitespace(StringUtilsTest.NON_WHITESPACE));
+        assertEquals("", StringUtils.deleteWhitespace(JStringUtilsTest.WHITESPACE));
+        assertEquals(JStringUtilsTest.NON_WHITESPACE, StringUtils.deleteWhitespace(JStringUtilsTest.NON_WHITESPACE));
         // Note: u-2007 and u-000A both cause problems in the source code
         // it should ignore 2007 but delete 000A
         assertEquals("\u00A0\u202F", StringUtils.deleteWhitespace("  \u00A0  \t\t\n\n \u202F  "));
