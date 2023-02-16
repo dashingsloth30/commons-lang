@@ -18,3 +18,8 @@ site-content
 .project
 .externalToolBuilders
 .checkstyle
+
+build
+.gradle/
+.kotlintest/
+./gradle/
